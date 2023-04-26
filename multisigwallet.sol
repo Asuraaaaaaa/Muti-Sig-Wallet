@@ -16,9 +16,9 @@ contract multisigwallet{
     }
 
 
-    address[] public owners;  //多个签名人
+    address[] public owners;  //Multi-signature
     mapping(address=> bool) public isowner;
-    uint public required; //最少确认数
+    uint public required; //Min confirmations
 
     Transaction[] public transactions;
     mapping(uint=> mapping(address=>bool)) public approved;
